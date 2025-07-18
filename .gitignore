@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Prisma client
+prisma/dev.db
+prisma/dev.db-journal
+
+# Swagger JSON cache (if generated)
+swagger-output.json
+
+# VSCode settings (optional)
+.vscode/
