@@ -14,7 +14,12 @@ const jobRoutes = require('./routes/jobRoutes')
 const applicationRoutes = require('./routes/applicationRoutes')
 
 // enable CORS
-app.use(cors())
+// Enable CORS for frontend
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}))
+
 
 // middleware to parse incoming json
 app.use(express.json())
