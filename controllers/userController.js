@@ -43,8 +43,11 @@ const registerUser = async (req, res) => {
       }
     })
 
+    const token = jwt.sign({ userId: user.id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1d' })
+
     return res.status(201).json({
       message : 'User registered successfully',
+      token,
       user : {
         id : user.id,
         name : user.name,
